@@ -49,19 +49,8 @@ export function Games() {
   };
 
   return (
-    <section id="games" ref={ref} className="relative py-24 bg-maroon-dark overflow-hidden">
-      {/* Subtle Carpet Background */}
-      <div 
-        className="absolute inset-0 opacity-10"
-        style={{ 
-          backgroundImage: 'url(/theme.jpeg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
-      />
-      
-      <div className="container mx-auto px-6 relative z-10">
+    <section id="games" ref={ref} className="py-24 bg-maroon-dark">
+      <div className="container mx-auto px-6">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -86,14 +75,24 @@ export function Games() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className={`
-                relative bg-maroon-primary p-8 rounded-xl text-center overflow-hidden
-                border-2 transition-all text-white
+                relative p-8 rounded-xl text-center overflow-hidden
+                border-2 transition-all text-white shadow-md hover:shadow-lg
                 ${game.featured
-                  ? 'border-white shadow-lg'
-                  : 'border-maroon-light hover:border-white shadow-md hover:shadow-lg'
+                  ? 'border-white'
+                  : 'border-maroon-light hover:border-white'
                 }
               `}
+              style={{
+                backgroundImage: 'url(/theme.jpeg)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
             >
+              {/* Dark overlay for readability */}
+              <div className="absolute inset-0 bg-maroon-primary/80" />
+
+              {/* Content wrapper */}
+              <div className="relative z-10">
               {/* Top Accent Bar */}
               {game.featured && (
                 <div className="absolute top-0 left-0 right-0 h-1 bg-white" />
@@ -130,6 +129,7 @@ export function Games() {
                   FEATURED
                 </div>
               )}
+              </div>
             </motion.div>
           ))}
         </div>

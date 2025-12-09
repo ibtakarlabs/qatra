@@ -20,7 +20,6 @@ export function Navbar() {
     { name: 'Games', href: '#games' },
     { name: 'Menu', href: '#menu' },
     { name: 'Events', href: '#events' },
-    { name: 'Gallery', href: '#gallery' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -37,22 +36,9 @@ export function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 py-4 border-b-2 border-maroon-primary relative overflow-hidden"
+      className="fixed top-0 left-0 right-0 z-50 bg-white py-4 border-b-2 border-maroon-primary shadow-md"
     >
-      {/* Long Carpet Background */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ 
-          backgroundImage: 'url(/long_carpet.webp)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}
-      />
-      
-      {/* Dark overlay for readability */}
-      <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
-      
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <motion.div
@@ -60,7 +46,7 @@ export function Navbar() {
             className="flex items-center gap-3 cursor-pointer"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            <div className="relative w-12 h-12 rounded-full border-2 border-white overflow-hidden">
+            <div className="relative w-12 h-12 rounded-full border-2 border-maroon-primary overflow-hidden">
               <Image
                 src="/icon.jpg"
                 alt="Qatra Cafe"
@@ -68,7 +54,7 @@ export function Navbar() {
                 className="object-cover"
               />
             </div>
-            <span className="text-2xl font-display font-bold text-white">
+            <span className="text-2xl font-display font-bold text-maroon-primary">
               QATRA
             </span>
           </motion.div>
@@ -84,10 +70,10 @@ export function Navbar() {
               >
                 <button
                   onClick={() => scrollToSection(link.href)}
-                  className="text-white font-medium hover:text-maroon-light transition-colors relative group"
+                  className="text-maroon-primary font-medium hover:text-maroon-dark transition-colors relative group"
                 >
                   {link.name}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-maroon-light transition-all group-hover:w-full" />
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-maroon-primary transition-all group-hover:w-full" />
                 </button>
               </motion.li>
             ))}
@@ -98,7 +84,7 @@ export function Navbar() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => scrollToSection('#booking')}
-            className="hidden md:block bg-white text-maroon-primary px-6 py-2 rounded-lg font-semibold hover:bg-maroon-light hover:text-white transition-colors"
+            className="hidden md:block bg-maroon-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-maroon-dark transition-colors"
           >
             Book a Table
           </motion.button>
@@ -111,15 +97,15 @@ export function Navbar() {
           >
             <motion.span
               animate={isMobileMenuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
-              className="w-6 h-0.5 bg-white transition-all"
+              className="w-6 h-0.5 bg-maroon-primary transition-all"
             />
             <motion.span
               animate={isMobileMenuOpen ? { opacity: 0 } : { opacity: 1 }}
-              className="w-6 h-0.5 bg-white transition-all"
+              className="w-6 h-0.5 bg-maroon-primary transition-all"
             />
             <motion.span
               animate={isMobileMenuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
-              className="w-6 h-0.5 bg-white transition-all"
+              className="w-6 h-0.5 bg-maroon-primary transition-all"
             />
           </button>
         </div>
@@ -143,7 +129,7 @@ export function Navbar() {
                   >
                     <button
                       onClick={() => scrollToSection(link.href)}
-                      className="text-white font-medium hover:text-maroon-light transition-colors w-full text-left"
+                      className="text-maroon-primary font-medium hover:text-maroon-dark transition-colors w-full text-left"
                     >
                       {link.name}
                     </button>

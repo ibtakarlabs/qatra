@@ -20,6 +20,28 @@
       repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(122, 30, 36, 0.03) 40px, rgba(122, 30, 36, 0.03) 80px),
       repeating-linear-gradient(-45deg, transparent, transparent 40px, rgba(122, 30, 36, 0.03) 40px, rgba(122, 30, 36, 0.03) 80px);
   }
+
+  .carpet-border {
+    border: 36px solid transparent;
+    border-image: url('/theme.jpeg') 60 round;
+  }
+
+  .carpet-border-thin {
+    border: 24px solid transparent;
+    border-image: url('/theme.jpeg') 40 round;
+  }
+
+  .carpet-border-top {
+    border-top: 36px solid transparent;
+    border-image: url('/theme.jpeg') 60 round;
+    border-image-slice: 60 0 0 0;
+  }
+
+  .carpet-border-bottom {
+    border-bottom: 36px solid transparent;
+    border-image: url('/theme.jpeg') 60 round;
+    border-image-slice: 0 0 60 0;
+  }
 }
 
 /* Smooth scrolling */

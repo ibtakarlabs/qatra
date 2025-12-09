@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useInView, useScroll, useTransform } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 
 const features = [
@@ -29,13 +29,6 @@ const features = [
 export function Vibe() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start end', 'end start'],
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
-  const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0]);
 
   return (
     <section
@@ -88,7 +81,7 @@ export function Vibe() {
             </div>
           </motion.div>
 
-          {/* Carpet Images */}
+          {/* Image Placeholder */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
@@ -98,17 +91,18 @@ export function Vibe() {
             <motion.div
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
-              className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl"
+              className="relative h-[600px] bg-white/5 backdrop-blur-sm rounded-2xl border-2 border-dashed border-white/30 flex items-center justify-center overflow-hidden"
             >
-              <img 
-                src="/long_carpet.webp" 
-                alt="Traditional Afghan carpet at Qatra"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-maroon-primary/80 via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                <h3 className="text-3xl font-display font-bold mb-2">Authentic Afghan Carpets</h3>
-                <p className="text-gray-200">Handwoven traditions beneath your feet</p>
+              <div className="text-center p-8">
+                <div className="text-white text-8xl mb-4">
+                  🫖
+                </div>
+                <p className="text-white text-xl font-display">
+                  Your vibe photos here
+                </p>
+                <p className="text-gray-200 text-sm mt-2">
+                  Add photos of your beautiful space and guests
+                </p>
               </div>
             </motion.div>
           </motion.div>

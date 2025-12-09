@@ -13,16 +13,16 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center bg-maroon-primary pt-20"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+      style={{
+        backgroundImage: 'url(/theme.jpeg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
     >
-      {/* Background Carpet Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
-        style={{ backgroundImage: 'url(/theme.jpeg)' }}
-      />
-      
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-maroon-primary/60" />
+      {/* Dark overlay for text readability */}
+      <div className="absolute inset-0 bg-maroon-dark/70" />
 
       {/* Content */}
       <div className="container mx-auto px-6 relative z-10">
@@ -94,29 +94,6 @@ export function Hero() {
           </motion.div>
         </motion.div>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white text-center"
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 2 }}
-          className="flex flex-col items-center gap-2"
-        >
-          <span className="text-sm">Scroll to explore</span>
-          <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-            <motion.div
-              animate={{ y: [0, 12, 0] }}
-              transition={{ repeat: Infinity, duration: 1.5 }}
-              className="w-1 h-2 bg-white rounded-full mt-2"
-            />
-          </div>
-        </motion.div>
-      </motion.div>
     </section>
   );
 }
