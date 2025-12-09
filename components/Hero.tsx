@@ -15,6 +15,15 @@ export function Hero() {
       id="home"
       className="relative min-h-screen flex items-center justify-center bg-maroon-primary pt-20"
     >
+      {/* Background Carpet Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+        style={{ backgroundImage: 'url(/theme.jpeg)' }}
+      />
+      
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-maroon-primary/60" />
+
       {/* Content */}
       <div className="container mx-auto px-6 relative z-10">
         <motion.div

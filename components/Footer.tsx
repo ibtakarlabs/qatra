@@ -20,8 +20,18 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-maroon-dark text-gray-200">
-      <div className="container mx-auto px-6 py-16">
+    <footer className="relative bg-maroon-dark text-gray-200 overflow-hidden">
+      {/* Subtle Carpet Background */}
+      <div 
+        className="absolute inset-0 opacity-5"
+        style={{ 
+          backgroundImage: 'url(/long_carpet.webp)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      />
+      
+      <div className="container mx-auto px-6 py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* About */}
           <motion.div

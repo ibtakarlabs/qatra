@@ -49,8 +49,19 @@ export function Games() {
   };
 
   return (
-    <section id="games" ref={ref} className="py-24 bg-maroon-dark">
-      <div className="container mx-auto px-6">
+    <section id="games" ref={ref} className="relative py-24 bg-maroon-dark overflow-hidden">
+      {/* Subtle Carpet Background */}
+      <div 
+        className="absolute inset-0 opacity-10"
+        style={{ 
+          backgroundImage: 'url(/theme.jpeg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      />
+      
+      <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}

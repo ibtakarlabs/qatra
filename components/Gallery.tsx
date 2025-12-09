@@ -6,14 +6,14 @@ import { useRef, useState } from 'react';
 const categories = ['all', 'games', 'coffee', 'food', 'vibes'];
 
 const galleryItems = [
-  { category: 'games', title: 'Pool Game' },
-  { category: 'coffee', title: 'Coffee Art' },
-  { category: 'vibes', title: 'Interior' },
-  { category: 'games', title: 'Ping Pong' },
-  { category: 'food', title: 'Bolani' },
-  { category: 'vibes', title: 'Afghan Carpets' },
-  { category: 'games', title: 'Cards' },
-  { category: 'coffee', title: 'Chai' },
+  { category: 'games', title: 'Pool Game', image: null },
+  { category: 'coffee', title: 'Coffee Art', image: null },
+  { category: 'vibes', title: 'Traditional Carpet', image: '/theme.jpeg' },
+  { category: 'games', title: 'Ping Pong', image: null },
+  { category: 'food', title: 'Bolani', image: null },
+  { category: 'vibes', title: 'Long Carpet Runner', image: '/long_carpet.webp' },
+  { category: 'games', title: 'Cards', image: null },
+  { category: 'coffee', title: 'Chai', image: null },
 ];
 
 export function Gallery() {
@@ -84,12 +84,20 @@ export function Gallery() {
               transition={{ duration: 0.4, delay: index * 0.05 }}
               className="relative aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow cursor-pointer group"
             >
-              {/* Placeholder with gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-maroon-primary to-maroon-dark">
-                <div className="absolute inset-0 flex items-center justify-center text-white font-display text-xl">
-                  {item.title}
+              {/* Image or Placeholder */}
+              {item.image ? (
+                <img 
+                  src={item.image} 
+                  alt={item.title}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              ) : (
+                <div className="absolute inset-0 bg-gradient-to-br from-maroon-primary to-maroon-dark">
+                  <div className="absolute inset-0 flex items-center justify-center text-white font-display text-xl">
+                    {item.title}
+                  </div>
                 </div>
-              </div>
+              )}
 
               {/* Hover Overlay */}
               <motion.div
@@ -97,7 +105,10 @@ export function Gallery() {
                 whileHover={{ opacity: 1 }}
                 className="absolute inset-0 bg-black/40 flex items-center justify-center"
               >
-                <span className="text-white text-lg font-semibold">View Photo</span>
+                <div className="text-center">
+                  <span className="text-white text-lg font-semibold block">{item.title}</span>
+                  <span className="text-white/80 text-sm">View Photo</span>
+                </div>
               </motion.div>
             </motion.div>
           ))}

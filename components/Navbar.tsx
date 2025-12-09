@@ -37,9 +37,22 @@ export function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-black py-4 border-b-2 border-maroon-primary"
+      className="fixed top-0 left-0 right-0 z-50 py-4 border-b-2 border-maroon-primary relative overflow-hidden"
     >
-      <div className="container mx-auto px-6">
+      {/* Long Carpet Background */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ 
+          backgroundImage: 'url(/long_carpet.webp)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      />
+      
+      {/* Dark overlay for readability */}
+      <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <motion.div
