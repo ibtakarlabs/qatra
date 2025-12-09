@@ -3,7 +3,14 @@
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { useRef, useState } from 'react';
 
-const menuData = {
+type MenuItem = {
+  name: string;
+  price: string;
+  description: string;
+  featured?: boolean;
+};
+
+const menuData: Record<string, MenuItem[]> = {
   coffee: [
     { name: 'Traditional Afghan Chai', price: '$4.50', description: 'Aromatic green tea with cardamom' },
     { name: 'Espresso', price: '$3.50', description: 'Rich, bold shot of energy' },

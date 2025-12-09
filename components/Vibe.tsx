@@ -2,25 +2,26 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { Coffee, Armchair, Target, Users } from 'lucide-react';
 
 const features = [
   {
-    icon: '🫖',
+    icon: Coffee,
     title: 'Traditional Chai & Coffee',
     description: 'Authentic Afghan green tea with cardamom, specialty lattes, and fresh pastries',
   },
   {
-    icon: '🪔',
+    icon: Armchair,
     title: 'Floor Seating Experience',
     description: 'Cushioned low tables on handwoven carpets - the Afghan way to gather',
   },
   {
-    icon: '🎯',
+    icon: Target,
     title: 'Classic Games',
     description: 'Carrom, chess, backgammon, and more - games that bring people together',
   },
   {
-    icon: '🤝',
+    icon: Users,
     title: 'Community Gathering Space',
     description: 'A welcoming haven for friends, families, dates, or solo relaxation',
   },
@@ -65,8 +66,8 @@ export function Vibe() {
                   transition={{ duration: 0.6, delay: index * 0.15 }}
                   className="flex gap-4 p-4 bg-white/10 backdrop-blur-sm rounded-lg border-l-2 border-white hover:bg-white/15 transition-colors"
                 >
-                  <div className="text-4xl flex-shrink-0">
-                    {feature.icon}
+                  <div className="flex-shrink-0">
+                    <feature.icon className="w-10 h-10 text-white" />
                   </div>
                   <div>
                     <h4 className="text-xl font-display font-bold text-white mb-2">
@@ -94,9 +95,7 @@ export function Vibe() {
               className="relative h-[600px] bg-white/5 backdrop-blur-sm rounded-2xl border-2 border-dashed border-white/30 flex items-center justify-center overflow-hidden"
             >
               <div className="text-center p-8">
-                <div className="text-white text-8xl mb-4">
-                  🫖
-                </div>
+                <Coffee className="w-24 h-24 text-white mx-auto mb-4" />
                 <p className="text-white text-xl font-display">
                   Your vibe photos here
                 </p>

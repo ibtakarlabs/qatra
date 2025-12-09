@@ -2,6 +2,7 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { MapPin, Phone, Mail } from 'lucide-react';
 
 export function Contact() {
   const ref = useRef(null);
@@ -9,17 +10,17 @@ export function Contact() {
 
   const contactInfo = [
     {
-      icon: '📍',
+      icon: MapPin,
       title: 'Location',
       details: '123 Main Street\nSan Francisco, CA 94102',
     },
     {
-      icon: '📞',
+      icon: Phone,
       title: 'Phone',
       details: '(555) QATRA-01\n(555) 728-7201',
     },
     {
-      icon: '✉️',
+      icon: Mail,
       title: 'Email',
       details: 'qatracafe@gmail.com',
     },
@@ -48,8 +49,8 @@ export function Contact() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="flex gap-6 p-6 bg-maroon-dark rounded-xl shadow-md hover:shadow-lg transition-shadow border-l-2 border-white text-white"
                 >
-                  <div className="text-5xl flex-shrink-0">
-                    {item.icon}
+                  <div className="flex-shrink-0">
+                    <item.icon className="w-12 h-12 text-white" />
                   </div>
                   <div>
                     <h4 className="text-xl font-display font-bold text-white mb-2">
