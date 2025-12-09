@@ -2,22 +2,21 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Disc3, CircleDot, Waves, Spade, Crown, Dices } from 'lucide-react';
+import { Disc3, Hexagon, Zap, Spade, Crown, Dices } from 'lucide-react';
 
 const games = [
   {
     icon: Disc3,
     title: 'Carrom',
     description: 'Traditional wooden striker board game - a South Asian favorite',
-    featured: true,
   },
   {
-    icon: CircleDot,
+    icon: Hexagon,
     title: 'Pool/Billiards',
     description: 'Professional-grade tables for serious players and casual fun',
   },
   {
-    icon: Waves,
+    icon: Zap,
     title: 'Ping Pong',
     description: 'Fast-paced action with premium paddles and balls',
   },
@@ -75,14 +74,7 @@ export function Games() {
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`
-                relative p-8 rounded-xl text-center overflow-hidden
-                border-2 transition-all text-white shadow-md hover:shadow-lg
-                ${game.featured
-                  ? 'border-white'
-                  : 'border-maroon-light hover:border-white'
-                }
-              `}
+              className="relative p-8 rounded-xl text-center overflow-hidden border-2 border-maroon-light hover:border-white transition-all text-white shadow-md hover:shadow-lg"
               style={{
                 backgroundImage: 'url(/theme.jpeg)',
                 backgroundSize: 'cover',
@@ -94,11 +86,6 @@ export function Games() {
 
               {/* Content wrapper */}
               <div className="relative z-10">
-              {/* Top Accent Bar */}
-              {game.featured && (
-                <div className="absolute top-0 left-0 right-0 h-1 bg-white" />
-              )}
-
               {/* Icon */}
               <div className="mb-6 flex justify-center">
                 <game.icon className="w-16 h-16 text-white" />
@@ -121,15 +108,8 @@ export function Games() {
                 onClick={scrollToBooking}
                 className="bg-white text-maroon-primary px-6 py-2 rounded-lg font-semibold hover:bg-maroon-light hover:text-white transition-colors"
               >
-                {game.featured ? 'Reserve Spot' : 'Book Now'}
+                Book Now
               </motion.button>
-
-              {/* Featured Badge */}
-              {game.featured && (
-                <div className="absolute top-4 right-4 bg-white text-maroon-primary px-3 py-1 rounded-full text-xs font-bold">
-                  FEATURED
-                </div>
-              )}
               </div>
             </motion.div>
           ))}
