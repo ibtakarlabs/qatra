@@ -2,36 +2,35 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Disc3, Hexagon, Zap, Spade, Crown, Dices } from 'lucide-react';
 
 const games = [
   {
-    icon: Disc3,
+    icon: '🎯',
     title: 'Carrom',
     description: 'Traditional wooden striker board game - a South Asian favorite',
   },
   {
-    icon: Hexagon,
+    icon: '🎱',
     title: 'Pool/Billiards',
     description: 'Professional-grade tables for serious players and casual fun',
   },
   {
-    icon: Zap,
+    icon: '🏓',
     title: 'Ping Pong',
     description: 'Fast-paced action with premium paddles and balls',
   },
   {
-    icon: Spade,
+    icon: '🃏',
     title: 'Card Games',
     description: 'Classic decks on low tables surrounded by cushions',
   },
   {
-    icon: Crown,
+    icon: '♟️',
     title: 'Chess & Backgammon',
     description: 'Traditional strategy games in a cozy setting',
   },
   {
-    icon: Dices,
+    icon: '🎲',
     title: 'Board Games',
     description: 'Extensive collection from classics to modern favorites',
   },
@@ -87,8 +86,8 @@ export function Games() {
               {/* Content wrapper */}
               <div className="relative z-10">
               {/* Icon */}
-              <div className="mb-6 flex justify-center">
-                <game.icon className="w-16 h-16 text-white" />
+              <div className="text-7xl mb-6">
+                {game.icon}
               </div>
 
               {/* Title */}

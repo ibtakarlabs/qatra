@@ -2,7 +2,7 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { MapPin, Phone, Mail } from 'lucide-react';
+import { MapPin, Phone, Mail, Smartphone, Instagram, Facebook, Video, Map } from 'lucide-react';
 
 export function Contact() {
   const ref = useRef(null);
@@ -70,21 +70,28 @@ export function Contact() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="flex gap-6 p-6 bg-maroon-dark rounded-xl shadow-md border-l-2 border-white text-white"
               >
-                <div className="text-5xl flex-shrink-0">📱</div>
+                <div className="flex-shrink-0">
+                  <Smartphone className="w-12 h-12 text-white" />
+                </div>
                 <div>
                   <h4 className="text-xl font-display font-bold text-white mb-4">
                     Social Media
                   </h4>
                   <div className="flex flex-wrap gap-3">
-                    {['Instagram', 'Facebook', 'TikTok'].map((social) => (
+                    {[
+                      { name: 'Instagram', icon: Instagram },
+                      { name: 'Facebook', icon: Facebook },
+                      { name: 'TikTok', icon: Video }
+                    ].map((social) => (
                       <motion.a
-                        key={social}
+                        key={social.name}
                         whileHover={{ scale: 1.05, y: -2 }}
                         whileTap={{ scale: 0.95 }}
                         href="#"
-                        className="px-4 py-2 bg-white text-maroon-primary rounded-lg font-semibold hover:bg-maroon-light hover:text-white transition-colors"
+                        className="flex items-center gap-2 px-4 py-2 bg-white text-maroon-primary rounded-lg font-semibold hover:bg-maroon-light hover:text-white transition-colors"
                       >
-                        {social}
+                        <social.icon className="w-4 h-4" />
+                        {social.name}
                       </motion.a>
                     ))}
                   </div>
@@ -101,9 +108,7 @@ export function Contact() {
             className="relative h-[600px] bg-gray-50 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center overflow-hidden"
           >
             <div className="text-center p-8">
-              <div className="text-maroon-primary text-8xl mb-4">
-                🗺️
-              </div>
+              <Map className="w-24 h-24 text-maroon-primary mx-auto mb-4" />
               <p className="text-maroon-primary text-2xl font-display font-bold mb-2">
                 Google Maps Integration
               </p>
