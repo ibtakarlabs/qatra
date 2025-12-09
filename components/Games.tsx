@@ -2,22 +2,22 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Target, Circle, Table2, Spade, Crown, Dices } from 'lucide-react';
+import { Disc3, CircleDot, Waves, Spade, Crown, Dices } from 'lucide-react';
 
 const games = [
   {
-    icon: Target,
+    icon: Disc3,
     title: 'Carrom',
     description: 'Traditional wooden striker board game - a South Asian favorite',
     featured: true,
   },
   {
-    icon: Circle,
+    icon: CircleDot,
     title: 'Pool/Billiards',
     description: 'Professional-grade tables for serious players and casual fun',
   },
   {
-    icon: Table2,
+    icon: Waves,
     title: 'Ping Pong',
     description: 'Fast-paced action with premium paddles and balls',
   },
