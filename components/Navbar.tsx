@@ -36,7 +36,7 @@ export function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-white py-4 border-b-2 border-maroon-primary shadow-md"
+      className="fixed top-0 left-0 right-0 z-50 bg-cream py-4 border-b-2 border-maroon-primary shadow-md"
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
@@ -84,7 +84,7 @@ export function Navbar() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => scrollToSection('#booking')}
-            className="hidden md:block bg-maroon-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-maroon-dark transition-colors"
+            className="hidden md:block bg-maroon-primary text-cream px-6 py-2 rounded-lg font-semibold hover:bg-maroon-dark transition-colors"
           >
             Book a Table
           </motion.button>
@@ -142,7 +142,7 @@ export function Navbar() {
                 >
                   <button
                     onClick={() => scrollToSection('#booking')}
-                    className="bg-maroon-primary text-white px-6 py-2 rounded-lg font-semibold w-full"
+                    className="bg-maroon-primary text-cream px-6 py-2 rounded-lg font-semibold w-full"
                   >
                     Book a Table
                   </button>

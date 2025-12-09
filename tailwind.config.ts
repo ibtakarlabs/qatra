@@ -18,7 +18,9 @@ const config: Config = {
           carpet: '#1A2542',      // Navy from carpets
         },
         cream: {
-          carpet: '#E8DCC8',      // Cream/beige from carpets
+          DEFAULT: '#F5F1E8',     // Soft cream - main cream color
+          light: '#FAF8F3',       // Very light cream
+          dark: '#E8DCC8',        // Darker cream/beige from carpets
         },
       },
       fontFamily: {

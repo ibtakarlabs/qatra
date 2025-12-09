@@ -25,18 +25,18 @@ export function Hero() {
       <div className="absolute inset-0 bg-maroon-dark/70" />
 
       {/* Content */}
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center text-white max-w-4xl mx-auto"
+          className="text-center text-cream max-w-4xl mx-auto py-8"
         >
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-6xl md:text-7xl lg:text-8xl font-display font-bold mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold mb-4 sm:mb-6 px-2"
           >
             Sip, Sit, Play
           </motion.h1>
@@ -45,7 +45,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-3xl md:text-4xl lg:text-5xl text-white font-display mb-8"
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-cream font-display mb-6 sm:mb-8 px-2"
           >
             An Afghan Coffee House & Game Lounge
           </motion.h2>
@@ -54,7 +54,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="text-xl md:text-2xl text-gray-200 mb-12 leading-relaxed"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-8 sm:mb-12 leading-relaxed px-4"
           >
             Experience authentic Afghan hospitality with traditional chai, floor seating on handwoven carpets, and classic games
           </motion.p>
@@ -63,13 +63,13 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center px-4 max-w-3xl mx-auto"
           >
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => scrollToSection('#menu')}
-              className="bg-white text-maroon-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-maroon-dark hover:text-white transition-colors shadow-lg w-full sm:w-auto"
+              className="bg-cream text-maroon-primary px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-maroon-dark hover:text-cream transition-colors shadow-lg w-full sm:w-auto whitespace-nowrap"
             >
               View Menu
             </motion.button>
@@ -78,7 +78,7 @@ export function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => scrollToSection('#games')}
-              className="bg-maroon-dark text-white px-8 py-4 rounded-lg font-semibold text-lg border-2 border-white hover:bg-white hover:text-maroon-primary transition-colors shadow-lg w-full sm:w-auto"
+              className="bg-maroon-dark text-cream px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg border-2 border-cream hover:bg-cream hover:text-maroon-primary transition-colors shadow-lg w-full sm:w-auto whitespace-nowrap"
             >
               See Games
             </motion.button>
@@ -87,7 +87,7 @@ export function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => scrollToSection('#booking')}
-              className="bg-transparent text-white px-8 py-4 rounded-lg font-semibold text-lg border-2 border-white hover:bg-white hover:text-maroon-primary transition-colors shadow-lg w-full sm:w-auto"
+              className="bg-transparent text-cream px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg border-2 border-cream hover:bg-cream hover:text-maroon-primary transition-colors shadow-lg w-full sm:w-auto whitespace-nowrap"
             >
               Book a Table
             </motion.button>

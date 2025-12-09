@@ -48,32 +48,32 @@ export function Games() {
   };
 
   return (
-    <section id="games" ref={ref} className="py-24 bg-maroon-dark">
-      <div className="container mx-auto px-6">
+    <section id="games" ref={ref} className="py-12 sm:py-16 md:py-20 lg:py-24 bg-maroon-dark">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 md:mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-display font-bold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-cream mb-3 sm:mb-4 px-4">
             Games & Activities
           </h2>
-          <p className="text-xl text-gray-200 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-200 max-w-2xl mx-auto px-4">
             Gather around on our Afghan carpets and play
           </p>
         </motion.div>
 
         {/* Games Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {games.map((game, index) => (
             <motion.div
               key={game.title}
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="relative p-8 rounded-xl text-center overflow-hidden border-2 border-maroon-light hover:border-white transition-all text-white shadow-md hover:shadow-lg"
+              className="relative p-8 rounded-xl text-center overflow-hidden border-2 border-maroon-light hover:border-cream transition-all text-cream shadow-md hover:shadow-lg"
               style={{
                 backgroundImage: 'url(/theme.jpeg)',
                 backgroundSize: 'cover',
@@ -91,7 +91,7 @@ export function Games() {
               </div>
 
               {/* Title */}
-              <h3 className="text-2xl font-display font-bold text-white mb-3">
+              <h3 className="text-2xl font-display font-bold text-cream mb-3">
                 {game.title}
               </h3>
 
@@ -105,7 +105,7 @@ export function Games() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={scrollToBooking}
-                className="bg-white text-maroon-primary px-6 py-2 rounded-lg font-semibold hover:bg-maroon-light hover:text-white transition-colors"
+                className="bg-cream text-maroon-primary px-6 py-2 rounded-lg font-semibold hover:bg-maroon-light hover:text-cream transition-colors"
               >
                 Book Now
               </motion.button>

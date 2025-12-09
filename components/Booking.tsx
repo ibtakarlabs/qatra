@@ -44,7 +44,7 @@ export function Booking() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-display font-bold text-white mb-4">
+          <h2 className="text-5xl md:text-6xl font-display font-bold text-cream mb-4">
             Book Your Spot
           </h2>
           <p className="text-xl text-gray-200">
@@ -58,7 +58,7 @@ export function Booking() {
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-2 bg-white p-8 rounded-2xl shadow-xl"
+            className="lg:col-span-2 bg-cream p-8 rounded-2xl shadow-xl"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -181,7 +181,7 @@ export function Booking() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
-                className="w-full bg-maroon-primary text-white py-4 rounded-lg font-bold text-lg hover:bg-maroon-dark transition-colors shadow-lg"
+                className="w-full bg-maroon-primary text-cream py-4 rounded-lg font-bold text-lg hover:bg-maroon-dark transition-colors shadow-lg"
               >
                 Reserve Now
               </motion.button>
@@ -193,9 +193,9 @@ export function Booking() {
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-gradient-to-br from-maroon-primary to-maroon-dark p-8 rounded-xl text-white"
+            className="bg-gradient-to-br from-maroon-primary to-maroon-dark p-8 rounded-xl text-cream"
           >
-            <h3 className="text-3xl font-display font-bold text-white mb-6">
+            <h3 className="text-3xl font-display font-bold text-cream mb-6">
               Walk-ins Welcome!
             </h3>
             <p className="text-gray-200 mb-8 leading-relaxed">
@@ -203,7 +203,7 @@ export function Booking() {
             </p>
 
             <div className="mb-8">
-              <h4 className="text-xl font-display font-bold text-white mb-4">
+              <h4 className="text-xl font-display font-bold text-cream mb-4">
                 Hours
               </h4>
               <ul className="space-y-2 text-gray-200">
@@ -214,7 +214,7 @@ export function Booking() {
             </div>
 
             <div>
-              <h4 className="text-xl font-display font-bold text-white mb-4">
+              <h4 className="text-xl font-display font-bold text-cream mb-4">
                 Game Table Rates
               </h4>
               <ul className="space-y-2 text-gray-200">

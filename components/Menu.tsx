@@ -56,7 +56,7 @@ export function Menu() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-display font-bold text-white mb-4">
+          <h2 className="text-5xl md:text-6xl font-display font-bold text-cream mb-4">
             Menu
           </h2>
           <p className="text-xl text-gray-200">
@@ -80,8 +80,8 @@ export function Menu() {
               className={`
                 px-8 py-3 rounded-lg font-semibold text-lg border-2 transition-all
                 ${activeTab === tab.id
-                  ? 'bg-white text-maroon-primary border-white shadow-lg'
-                  : 'bg-maroon-dark text-white border-white hover:bg-maroon-dark/80'
+                  ? 'bg-cream text-maroon-primary border-cream shadow-lg'
+                  : 'bg-maroon-dark text-cream border-cream hover:bg-maroon-dark/80'
                 }
               `}
             >
@@ -107,21 +107,21 @@ export function Menu() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 className={`
-                  bg-maroon-dark p-6 rounded-xl border-l-4 shadow-md hover:shadow-xl transition-shadow text-white
-                  ${item.featured ? 'border-white' : 'border-maroon-light'}
+                  bg-maroon-dark p-6 rounded-xl border-l-4 shadow-md hover:shadow-xl transition-shadow text-cream
+                  ${item.featured ? 'border-cream' : 'border-maroon-light'}
                 `}
               >
                 <div className="flex justify-between items-start mb-2">
-                  <h4 className="text-xl font-display font-bold text-white flex-1">
+                  <h4 className="text-xl font-display font-bold text-cream flex-1">
                     {item.name}
                   </h4>
-                  <span className="text-2xl font-bold text-white ml-4">
+                  <span className="text-2xl font-bold text-cream ml-4">
                     {item.price}
                   </span>
                 </div>
                 <p className="text-gray-200 leading-relaxed">{item.description}</p>
                 {item.featured && (
-                  <div className="mt-3 inline-block bg-white text-maroon-primary px-3 py-1 rounded-full text-xs font-bold">
+                  <div className="mt-3 inline-block bg-cream text-maroon-primary px-3 py-1 rounded-full text-xs font-bold">
                     SPECIAL COMBO
                   </div>
                 )}

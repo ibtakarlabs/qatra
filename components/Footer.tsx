@@ -40,7 +40,7 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h4 className="text-2xl font-display font-bold text-white mb-4">
+            <h4 className="text-2xl font-display font-bold text-cream mb-4">
               Qatra Cafe
             </h4>
             <p className="leading-relaxed text-gray-200">
@@ -55,7 +55,7 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <h4 className="text-xl font-display font-bold text-white mb-4">
+            <h4 className="text-xl font-display font-bold text-cream mb-4">
               Quick Links
             </h4>
             <ul className="space-y-2">
@@ -63,7 +63,7 @@ export function Footer() {
                 <li key={link}>
                   <button
                     onClick={() => scrollToSection(link)}
-                    className="hover:text-white transition-colors"
+                    className="hover:text-cream transition-colors"
                   >
                     {link.replace('#', '').charAt(0).toUpperCase() + link.slice(2)}
                   </button>
@@ -79,13 +79,13 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h4 className="text-xl font-display font-bold text-white mb-4">
+            <h4 className="text-xl font-display font-bold text-cream mb-4">
               Connect
             </h4>
             <ul className="space-y-2">
               {['Instagram', 'Facebook', 'TikTok', 'Newsletter'].map((social) => (
                 <li key={social}>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-cream transition-colors">
                     {social}
                   </a>
                 </li>
@@ -100,7 +100,7 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <h4 className="text-xl font-display font-bold text-white mb-4">
+            <h4 className="text-xl font-display font-bold text-cream mb-4">
               Newsletter
             </h4>
             <p className="mb-4 text-gray-200">Get updates on events and special offers</p>
@@ -111,13 +111,13 @@ export function Footer() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 placeholder="Your email"
-                className="flex-1 px-4 py-2 rounded-lg bg-maroon-primary border border-white/30 focus:border-white outline-none transition-colors text-white placeholder:text-gray-300"
+                className="flex-1 px-4 py-2 rounded-lg bg-maroon-primary border border-cream/30 focus:border-cream outline-none transition-colors text-cream placeholder:text-gray-300"
               />
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 type="submit"
-                className="bg-white text-maroon-primary px-6 py-2 rounded-lg font-semibold hover:bg-maroon-light hover:text-white transition-colors"
+                className="bg-cream text-maroon-primary px-6 py-2 rounded-lg font-semibold hover:bg-maroon-light hover:text-cream transition-colors"
               >
                 Subscribe
               </motion.button>
@@ -131,7 +131,7 @@ export function Footer() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="border-t border-white/20 pt-8 text-center"
+          className="border-t border-cream/20 pt-8 text-center"
         >
           <p className="text-gray-200">&copy; 2024 Qatra Cafe. All rights reserved.</p>
         </motion.div>

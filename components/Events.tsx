@@ -41,7 +41,7 @@ export function Events() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-display font-bold text-white mb-4">
+          <h2 className="text-5xl md:text-6xl font-display font-bold text-cream mb-4">
             Events & Tournaments
           </h2>
           <p className="text-xl text-gray-200">
@@ -57,25 +57,25 @@ export function Events() {
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
-              className="bg-maroon-primary rounded-xl shadow-md hover:shadow-lg transition-shadow overflow-hidden text-white border-2 border-white"
+              className="bg-maroon-primary rounded-xl shadow-md hover:shadow-lg transition-shadow overflow-hidden text-cream border-2 border-cream"
             >
               <div className="flex gap-6 p-6">
                 {/* Date Badge */}
-                <div className="flex-shrink-0 bg-white text-maroon-primary rounded-lg p-4 text-center min-w-[80px]">
+                <div className="flex-shrink-0 bg-cream text-maroon-primary rounded-lg p-4 text-center min-w-[80px]">
                   <div className="text-sm font-semibold tracking-wide">{event.day}</div>
                   <div className="text-4xl font-display font-bold">{event.date}</div>
                 </div>
 
                 {/* Event Details */}
                 <div className="flex-1">
-                  <h3 className="text-2xl font-display font-bold text-white mb-2">
+                  <h3 className="text-2xl font-display font-bold text-cream mb-2">
                     {event.title}
                   </h3>
                   <p className="text-gray-200 font-semibold mb-3">{event.time}</p>
                   <p className="text-gray-200 mb-4 leading-relaxed">
                     {event.description}
                   </p>
-                  <button className="bg-white text-maroon-primary px-6 py-2 rounded-lg font-semibold hover:bg-maroon-light hover:text-white transition-colors">
+                  <button className="bg-cream text-maroon-primary px-6 py-2 rounded-lg font-semibold hover:bg-maroon-light hover:text-cream transition-colors">
                     Register Now
                   </button>
                 </div>
@@ -91,10 +91,10 @@ export function Events() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center bg-gradient-to-br from-maroon-primary to-maroon-dark p-12 rounded-xl"
         >
-          <p className="text-2xl text-white mb-6 font-display">
+          <p className="text-2xl text-cream mb-6 font-display">
             Want to stay updated on all our events?
           </p>
-          <button className="bg-white text-maroon-primary px-10 py-4 rounded-lg font-bold text-lg hover:bg-maroon-light hover:text-white transition-colors shadow-lg">
+          <button className="bg-cream text-maroon-primary px-10 py-4 rounded-lg font-bold text-lg hover:bg-maroon-light hover:text-cream transition-colors shadow-lg">
             View Full Calendar
           </button>
         </motion.div>

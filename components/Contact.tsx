@@ -36,7 +36,7 @@ export function Contact() {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-5xl md:text-6xl font-display font-bold text-white mb-12">
+            <h2 className="text-5xl md:text-6xl font-display font-bold text-cream mb-12">
               Visit Us
             </h2>
 
@@ -47,13 +47,13 @@ export function Contact() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="flex gap-6 p-6 bg-maroon-dark rounded-xl shadow-md hover:shadow-lg transition-shadow border-l-2 border-white text-white"
+                  className="flex gap-6 p-6 bg-maroon-dark rounded-xl shadow-md hover:shadow-lg transition-shadow border-l-2 border-cream text-cream"
                 >
                   <div className="flex-shrink-0">
-                    <item.icon className="w-12 h-12 text-white" />
+                    <item.icon className="w-12 h-12 text-cream" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-display font-bold text-white mb-2">
+                    <h4 className="text-xl font-display font-bold text-cream mb-2">
                       {item.title}
                     </h4>
                     <p className="text-gray-200 whitespace-pre-line leading-relaxed">
@@ -68,13 +68,13 @@ export function Contact() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="flex gap-6 p-6 bg-maroon-dark rounded-xl shadow-md border-l-2 border-white text-white"
+                className="flex gap-6 p-6 bg-maroon-dark rounded-xl shadow-md border-l-2 border-cream text-cream"
               >
                 <div className="flex-shrink-0">
-                  <Smartphone className="w-12 h-12 text-white" />
+                  <Smartphone className="w-12 h-12 text-cream" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-display font-bold text-white mb-4">
+                  <h4 className="text-xl font-display font-bold text-cream mb-4">
                     Social Media
                   </h4>
                   <div className="flex flex-wrap gap-3">
@@ -88,7 +88,7 @@ export function Contact() {
                         whileHover={{ scale: 1.05, y: -2 }}
                         whileTap={{ scale: 0.95 }}
                         href="#"
-                        className="flex items-center gap-2 px-4 py-2 bg-white text-maroon-primary rounded-lg font-semibold hover:bg-maroon-light hover:text-white transition-colors"
+                        className="flex items-center gap-2 px-4 py-2 bg-cream text-maroon-primary rounded-lg font-semibold hover:bg-maroon-light hover:text-cream transition-colors"
                       >
                         <social.icon className="w-4 h-4" />
                         {social.name}
